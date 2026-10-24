@@ -162,3 +162,18 @@ function gameLoop() {
 
   requestAnimationFrame(gameLoop);
 }
+// Mobile touch support
+const mobileBtn = document.getElementById("tap-action-btn");
+if (mobileBtn) {
+    mobileBtn.addEventListener("click", () => {
+        if (!isPlaying) {
+            // Restarts the game if it's over
+            selectOperative(selectedOperative, operativeRole);
+        } else {
+            // Triggers the breach action
+            if (typeof handleBreachAction === "function") {
+                handleBreachAction();
+            }
+        }
+    });
+}
