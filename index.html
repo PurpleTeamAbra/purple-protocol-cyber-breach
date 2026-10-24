@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PURPLE PROTOCOL: CYBER-BREACH</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <header>
+      <h1>PURPLE PROTOCOL: CYBER-BREACH</h1>
+      <p id="sub-title">SELECT OPERATIVE</p>
+    </header>
+
+    <div id="character-select">
+  <button class="select-btn" onclick="selectOperative('ABRA', 'PURPLE TEAM LEAD')">OPERATIVE ABRA</button>
+  <button class="select-btn" onclick="selectOperative('RODERICK', 'DEFENSIVE ARCHITECT')">OPERATIVE RODERICK</button>
+  <button class="select-btn" onclick="selectOperative('CIPHER', 'OFFENSIVE SPECIALIST')">OPERATIVE CIPHER</button>
+  <button class="select-btn" onclick="selectOperative('ECHO', 'THREAT HUNTER')">OPERATIVE ECHO</button>
+</div>
+ <div id="game-screen" class="hidden">
+      <div id="hud">
+        <span>OPERATIVE: <strong id="active-op">-</strong></span>
+        <span>SCORE: <strong id="score">0</strong></span>
+      </div>
+      <canvas id="cyberCanvas" width="600" height="400"></canvas>
+      <p clas="controls-hint">Press <strong>SPACEBAR</strong> to breach firewalls!</p>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
