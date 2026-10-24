@@ -177,15 +177,13 @@ if (mobileBtn) {
         }
     });
 }
-/ Cross-platform tap and click support for mobile and desktop canvas
+// Cross-platform tap and click support for mobile and desktop canvas
 const gameCanvas = document.getElementById("cyberCanvas");
 if (gameCanvas) {
     gameCanvas.addEventListener("click", () => {
         if (!isPlaying) {
-            // Restarts the game if it's over
             selectOperative(selectedOperative, operativeRole);
         } else {
-            // Triggers the breach action
             if (typeof handleBreachAction === "function") {
                 handleBreachAction();
             }
